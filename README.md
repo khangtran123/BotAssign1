@@ -10,7 +10,7 @@ Team Members
 ************
 Emilio Wu 
 Khang Tran  
-Mark Batin 
+Mark Batin - Acknowledged
 Anderson Phan 
 
 ******************
