@@ -11,7 +11,7 @@ Team Members
 Emilio Wu - Acknowledged
 Khang Tran  
 Mark Batin - Acknowledged
-Anderson Phan 
+Anderson Phan - Acknowledged
 
 ******************
 Coding Conventions
