@@ -9,9 +9,9 @@ This is the starter webapp for Assignment 1
 Team Members
 ************
 Emilio Wu - Acknowledged
-Khang Tran  
+Khang Tran - Acknowledged  
 Mark Batin - Acknowledged
-Anderson Phan 
+Anderson Phan - Acknowledged
 
 ******************
 Coding Conventions
