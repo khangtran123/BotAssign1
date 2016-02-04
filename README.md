@@ -10,13 +10,8 @@ Team Members
 ************
 Emilio Wu - Acknowledged
 Khang Tran  
-<<<<<<< HEAD
-Mark Batin 
-Anderson Phan -acknowledged
-=======
 Mark Batin - Acknowledged
-Anderson Phan -acknowledged
->>>>>>> refs/remotes/4850assign-G1/master
+Anderson Phan 
 
 ******************
 Coding Conventions
