@@ -7,20 +7,9 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>BotGame - Homepage</title>
+        <title></title>
     </head>
     <body>
-        <header>
-            
-        </header>
-        <nav>
-            
-        </nav>
-        <div id="container">
-            <div id="sidebar">
-                <p>Hello World!</p>
-            </div>
-        </div>
         <?php
         // put your code here
         ?>
