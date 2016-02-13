@@ -4,7 +4,7 @@
  * application/controllers/Home.php
  */
 
-class Home extends Application
+class Home extends Ci_controller
 {
     function __construct()
     {
@@ -13,7 +13,9 @@ class Home extends Application
     
     public function index()
     {
-        $this->load->view('homepage');
+		$this->load->view('MasterpageHeader');
+		$this->load->view('MasterpageNavBar');
+		$this->load->view('Homepage');
     }
 }
 

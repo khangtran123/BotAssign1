@@ -7,15 +7,11 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
+		<link rel="stylesheet" href="../assets/css/style.css"/>
         <title>BotGame - Homepage</title>
     </head>
     <body>
-        <header>
-            
-        </header>
-        <nav>
-            
-        </nav>
+		
         <div id="container">
             <div id="sidebar">
                 <p>Hello World!</p>
