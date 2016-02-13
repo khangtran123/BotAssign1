@@ -15,7 +15,7 @@ class PlayerInfo extends MY_Model {
     
     function __construct() {
         parent::__construct();
-        $this->tablename = 'PlayerInfo';
+        $this->tablename = 'players';
         $this->keyfield = 'Player'; 
     }
     
@@ -24,12 +24,12 @@ class PlayerInfo extends MY_Model {
       * of bot cards each player has 
      */
     
-    function playerEC(){
+    public function playerEC(){
         $query = $this->db->query('SELECT players.Player, players.Peanuts, '
                 . 'count(Piece) Total_Pieces FROM `collections` INNER JOIN players '
                 . 'ON collections.Player = players.Player GROUP BY players.Player');
       
-        return $query; 
+        return $query->result();  
     }
 
 }

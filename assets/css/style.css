@@ -1,5 +1,5 @@
 /* CSS definition file containing site stylesheet */
-body {background-color: blue;}
+body {background-color: #FF0000;}
 #content {width:100%; margin-left:5% auto;margin-right:5% auto;}
 #footer {font-size: small; font-style:italic;text-align:center;}
 .row>div {margin-bottom:10px;}
@@ -21,8 +21,10 @@ body{
 }
 
 #gameStatus{
-    width: 50%; 
-    top: 70px;
+    color: white;
+    width: 50%;
+    top: 200px;
+ 
 }
 
 #intro {
@@ -36,8 +38,9 @@ body{
 }
 
 #right_container{
+        color: #C0BEBE;
 	position: absolute;
-	top: 60px;
+	top: 250px;
 	right: 0.5%;
 	width: 	30%;
 	padding-bottom: 30px;
@@ -50,13 +53,13 @@ body{
 .firstColumn{
     float: left; 
     margin-right: 110px; 
-    border: 1px solid black;
+    border: 2px solid #C0BEBE;
 }
 
 .secondColumn{
     //display: inline-block;
     float: right;   
-    border: 1px solid black; 
+    border: 2px solid #C0BEBE; 
 }
 /*------ END OF HOMEPAGE ------*/
 
@@ -66,14 +69,18 @@ body{
 /**------ CSS FOR THE HEADER FIELD ------******************************************************************/
 
 #banner{
-	width:99%;
+	width:30%;
 }
 
+#siteTitle{
+    font-size: 40px;
+}
 
 #bannerLogoImage{}
 
 #headerInfo{
-	width:65px;
+        color: white;
+	width:60px;
 	padding-left: 3em;
 }
 
@@ -107,7 +114,7 @@ nav ul li a{
 	
 	padding: 5px 25px;
 	text-decoration: none;
-	color: #C0BEBE;
+	color: white;
 	background: #252E30;
 	font-size: 0.9em;
 	text-align: center;

@@ -15,31 +15,30 @@ class Home extends CI_Controller
     
     public function index()
     {
-		$this->load->view('MasterpageHeader');
-		$this->load->view('MasterpageNavBar');
+		$this->load->view('_MasterpageHeader');
+		$this->load->view('_MasterpageNavBar');
 		$this->load->view('Homepage');
     }
     
-    /*
+    
     private function playerInfo()
     {
-        $this->load->model('playerinfo');
+        $this->load->model('PlayerInfo');
         
         //try to call the query in the model to initialize it
-         
+        $query = $this->PlayerInfo->playerEC();  
         $playerInfo = array();
         
-        foreach ($query->result() as $row){
-            $row = $query->row_array(); 
-            $playerInfo[] = $row[];
+        foreach ($query as $row){
+            $playerInfo[] = (array) $row;
         }
         //this assigns the array to a variable which will later be called in
         //the view
-        $this->data['playerInfo'] = 'playerEC'; 
+        $this->data['playerInfo'] = $playerInfo;
+        $this->parser->parse('Homepage', $this->data);
         
-    }
-     */ 
-     
+    } 
+    
 }
 
     /* End of file Home.php */

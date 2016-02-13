@@ -13,12 +13,6 @@ and open the template in the editor.
         <title>Home Page</title>
     </head>
     <body>
-        <header>
-           <!--This is for the master header--> 
-        </header>
-        <nav>
-           <!--This is for the master menu bar-->
-        </nav>
         <div id="container">
             <div id="gameStatus">
                 <h2 class = "text">Game Status</h2>
@@ -41,7 +35,11 @@ and open the template in the editor.
                  <table class="firstColumn">
                      <tr>
                          <td colspan="2">
-                             <p class="playerName">Mickey</p>
+                             <p class="playerName">
+                                 {playerInfo}
+                                    {Player}
+                                 {/playerInfo}
+                             </p>
                          </td>
                      </tr>
                      <tr>
