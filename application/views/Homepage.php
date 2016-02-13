@@ -9,6 +9,8 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <link rel="stylesheet" href="../assets/css/style.css"/>
         <title>Home</title>
+        <link rel="stylesheet" href="../assets/css/style.css"/>
+        <title>Home Page</title>
     </head>
     <body>
         <header>

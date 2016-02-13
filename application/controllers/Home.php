@@ -4,7 +4,9 @@
  * application/controllers/Home.php
  */
 
+
 class Home extends CI_Controller
+
 {
     function __construct()
     {
@@ -13,9 +15,12 @@ class Home extends CI_Controller
     
     public function index()
     {
-        $this->load->view('homepage');
+		$this->load->view('MasterpageHeader');
+		$this->load->view('MasterpageNavBar');
+		$this->load->view('Homepage');
     }
     
+    /*
     private function playerInfo()
     {
         $this->load->model('playerinfo');
@@ -33,6 +38,8 @@ class Home extends CI_Controller
         $this->data['playerInfo'] = 'playerEC'; 
         
     }
+     */ 
+     
 }
 
     /* End of file Home.php */
