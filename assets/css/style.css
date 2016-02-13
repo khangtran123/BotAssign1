@@ -1,0 +1,82 @@
+/* CSS definition file containing site stylesheet */
+body {background-color: blue;}
+#content {width:100%; margin-left:5% auto;margin-right:5% auto;}
+#footer {font-size: small; font-style:italic;text-align:center;}
+.row>div {margin-bottom:10px;}
+
+/**------ CSS FOR THE HEADER FIELD ------******************************************************************/
+
+#banner{
+	width:99%;
+}
+
+
+#bannerLogoImage{}
+
+#headerInfo{
+	width:65*;
+	padding-left: 3em;
+}
+
+/*------ END OF HEADER FIELD ------*/
+
+/**------ CSS FOR THE NAVIGATION MENUBAR FIELD ------******************************************************/
+
+nav{
+	padding: 0 0 0 0;
+}
+
+nav ul{
+	list-style: none;
+	padding: 0;
+	position: relative;
+}
+nav ul:after {
+	content: "";
+	clear: both;
+	display: block;
+}
+
+.menu{
+	float: left;
+	text-align: center;
+	width: 33.3%;
+	line-height: 25px;
+}
+
+nav ul li a{
+	
+	padding: 5px 25px;
+	text-decoration: none;
+	color: #C0BEBE;
+	background: #252E30;
+	font-size: 0.9em;
+	text-align: center;
+	display: block;
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+}
+	
+nav ul li a:hover {
+	background: #353A42;
+	color: #49CBCD;
+	text-decoration: none;
+}
+nav ul ul{
+	display: none;
+	position: absolute;
+	width: 20%;
+}
+
+nav ul li:hover > ul{
+	display: block;
+	z-index: 1;
+}
+/*------ END OF NAVIGATION MENUBAR FIELD ------*/
+
+/**------ CSS FOR THE FOOTER FIELD ------******************************************************************/
+
+
+/*------ END OF FOOTER FIELD ------*/
