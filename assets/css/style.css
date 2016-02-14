@@ -61,6 +61,23 @@ body{
     float: right;   
     border: 2px solid #C0BEBE; 
 }
+
+#gameStats {
+	border: 2px solid #C0BEBE;
+}
+
+.seriesStats{
+	border-left: 2px solid #C0BEBE;
+	border-right: 2px solid #C0BEBE;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.seriesStats th{
+	border-bottom: 2px solid #C0BEBE;
+	text-align: center;
+	height: 10px;
+}
 /*------ END OF HOMEPAGE ------*/
 
 
