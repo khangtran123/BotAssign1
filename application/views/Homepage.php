@@ -17,10 +17,7 @@ and open the template in the editor.
             <div id="gameStatus">
                 <h2 class = "text">Game Status</h2>
                 <p id="statusContent">
-                    The Evaluation Glossary App was developed by Kylie Hutchinson of Community Solutions Planning & Evaluation.  
-                    It combines over 600 terms related to evaluation, program planning, and research derived from various sources.  All terms 
-                    are used with the permission of the publishers.  Special thanks to Chris Lovato, Jessica Dunkley, Khang Tran, Michael Chung, 
-                    Mark Batin, and Anderson Phan for their support.
+                    You're Welcome:)
                 </p>
             </div>
              <!-- Right bar (Players Info) !-->
@@ -31,112 +28,7 @@ and open the template in the editor.
              <!-- SQL Command to get peanuts from each player: SELECT * FROM players-->
              <div id="right_container">
                  <h2 class = "text">Player Info</h2>
-                 
-                 <table class="firstColumn">
-                     <tr>
-                         <td colspan="2">
-                             <p class="playerName">
-                                 {playerInfo}
-                                    {Player}
-                                 {/playerInfo}
-                             </p>
-                         </td>
-                     </tr>
-                     <tr>
-                         <td>
-                            <p>Cash: </p>
-                         </td>
-                         <td>
-                             <p>
-                                {playerInfo}
-                                   {Peanuts}
-                                {/playerInfo} Peanuts
-                             </p>
-                         </td>
-                     </tr>
-                     <tr>
-                         <td>
-                             <p>Equity:</p>
-                         </td>
-                         <td>
-                             <p>
-                                {playerInfo}
-                                   {Total_Pieces}
-                                {/playerInfo} Cards
-                             </p>
-                         </td>
-                     </tr>
-                 </table>
-                 <table class="secondColumn">
-                     <tr>
-                         <td colspan="2">
-                             <p class="playerName">Donald</p>
-                         </td>
-                     </tr>
-                     <tr>
-                         <td>
-                            <p>Peanuts: </p>
-                         </td>
-                         <td>
-                             <p>10 Peanuts</p>
-                         </td>
-                     </tr>
-                     <tr>
-                         <td>
-                             <p>Equity: </p>
-                         </td>
-                         <td>
-                             <p>5 Peanuts</p>
-                         </td>
-                     </tr>
-                 </table>
-                 <br />
-                  <table class="firstColumn">
-                     <tr>
-                         <td colspan="2">
-                             <p class="playerName">Mickey</p>
-                         </td>
-                     </tr>
-                     <tr>
-                         <td>
-                            <p>Peanuts: </p>
-                         </td>
-                         <td>
-                             <p>10 Peanuts</p>
-                         </td>
-                     </tr>
-                     <tr>
-                         <td>
-                             <p>Equity: </p>
-                         </td>
-                         <td>
-                             <p>5 Peanuts</p>
-                         </td>
-                     </tr>
-                 </table>
-                 <table class="secondColumn">
-                     <tr>
-                         <td colspan="2">
-                             <p class="playerName">Donald</p>
-                         </td>
-                     </tr>
-                     <tr>
-                         <td>
-                            <p>Peanuts: </p>
-                         </td>
-                         <td>
-                             <p>10 Peanuts</p>
-                         </td>
-                     </tr>
-                     <tr>
-                         <td>
-                             <p>Equity: </p>
-                         </td>
-                         <td>
-                             <p>5 Peanuts</p>
-                         </td>
-                     </tr>
-                 </table>
+                 {playerInfo}
              </div>
             
         </div>
