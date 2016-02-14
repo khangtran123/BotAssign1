@@ -1,20 +1,86 @@
 /* CSS definition file containing site stylesheet */
-body {background-color: blue;}
+body {background-color: #FF0000;}
 #content {width:100%; margin-left:5% auto;margin-right:5% auto;}
 #footer {font-size: small; font-style:italic;text-align:center;}
 .row>div {margin-bottom:10px;}
 
+body{
+	/*background-color: blue;*/ 
+}
+
+.text{
+    font-weight: bold; 
+    font-size: 30px; 
+    text-align: center; 
+}
+
+/**------ CSS FOR HOMEPAGE ------**/
+#container{
+    overflow: auto; 
+    width: 100%; 
+}
+
+#gameStatus{
+    color: white;
+    width: 50%;
+    top: 200px;
+ 
+}
+
+#intro {
+	font-size: 18px;
+	text-align: justify;
+}
+
+#statusContent{
+    padding-left: 16.8%;
+    width: 50%;
+}
+
+#right_container{
+        color: #C0BEBE;
+	position: absolute;
+	top: 250px;
+	right: 0.5%;
+	width: 	30%;
+	padding-bottom: 30px;
+}
+
+.playerName{
+    font-weight: bold; 
+}
+
+.firstColumn{
+    float: left; 
+    margin-right: 110px; 
+    border: 2px solid #C0BEBE;
+}
+
+.secondColumn{
+    //display: inline-block;
+    float: right;   
+    border: 2px solid #C0BEBE; 
+}
+/*------ END OF HOMEPAGE ------*/
+
+
+
+
 /**------ CSS FOR THE HEADER FIELD ------******************************************************************/
 
 #banner{
-	width:99%;
+	width:30%;
 }
 
+#siteTitle{
+    font-size: 40px;
+}
 
 #bannerLogoImage{}
 
 #headerInfo{
-	width:65*;
+        color: white;
+	width:60px;
 	padding-left: 3em;
 }
 
@@ -48,7 +114,7 @@ nav ul li a{
 	
 	padding: 5px 25px;
 	text-decoration: none;
-	color: #C0BEBE;
+	color: white;
 	background: #252E30;
 	font-size: 0.9em;
 	text-align: center;
@@ -80,3 +146,4 @@ nav ul li:hover > ul{
 
 
 /*------ END OF FOOTER FIELD ------*/
+
