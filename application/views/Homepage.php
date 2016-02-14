@@ -31,7 +31,7 @@ and open the template in the editor.
              <!-- SQL Command to get peanuts from each player: SELECT * FROM players-->
              <div id="right_container">
                  <h2 class = "text">Player Info</h2>
-  
+                 
                  <table class="firstColumn">
                      <tr>
                          <td colspan="2">
@@ -44,10 +44,14 @@ and open the template in the editor.
                      </tr>
                      <tr>
                          <td>
-                            <p>Peanuts: </p>
+                            <p>Cash: </p>
                          </td>
                          <td>
-                             <p>10 Peanuts</p>
+                             <p>
+                                {playerInfo}
+                                   {Peanuts}
+                                {/playerInfo} Peanuts
+                             </p>
                          </td>
                      </tr>
                      <tr>
@@ -56,7 +60,9 @@ and open the template in the editor.
                          </td>
                          <td>
                              <p>
-                                 {username}
+                                {playerInfo}
+                                   {Total_Pieces}
+                                {/playerInfo} Cards
                              </p>
                          </td>
                      </tr>

@@ -17,7 +17,7 @@ class Home extends CI_Controller
     {
 		$this->load->view('_MasterpageHeader');
 		$this->load->view('_MasterpageNavBar');
-		$this->load->view('Homepage');
+                $this->playerInfo();
     }
     
     
@@ -28,9 +28,14 @@ class Home extends CI_Controller
         //try to call the query in the model to initialize it
         $query = $this->PlayerInfo->playerEC();  
         $playerInfo = array();
+        $individualPlayer = array(); 
         
         foreach ($query as $row){
             $playerInfo[] = (array) $row;
+        }
+        
+        foreach ($playerInfo as $record){
+            
         }
         //this assigns the array to a variable which will later be called in
         //the view
