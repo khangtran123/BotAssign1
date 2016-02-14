@@ -1,51 +1,57 @@
 <?php
 
-/* 
+/*
  * application/controllers/Home.php
  */
 
+class Home extends CI_Controller {
 
-class Home extends CI_Controller
-
-{
-    function __construct()
-    {
+    function __construct() {
         parent::__construct();
     }
-    
-    public function index()
-    {
-		$this->load->view('_MasterpageHeader');
-		$this->load->view('_MasterpageNavBar');
-                $this->playerInfo();
+
+    public function index() {
+        $this->load->view('_MasterpageHeader');
+        $this->load->view('_MasterpageNavBar');
+        $this->playerInfo();
     }
-    
-    
-    private function playerInfo()
-    {
+
+    private function playerInfo() {
         $this->load->model('PlayerInfo');
-        
+
         //try to call the query in the model to initialize it
-        $query = $this->PlayerInfo->playerEC();  
+        $query = $this->PlayerInfo->playerEC();
+
+
         $playerInfo = array();
-        $individualPlayer = array(); 
-        
-        foreach ($query as $row){
+
+        foreach ($query as $row) {
             $playerInfo[] = (array) $row;
         }
         
-        foreach ($playerInfo as $record){
-            
+        $table = array();
+        foreach ($playerInfo as $index => $row) {
+            $new = $row;
+            switch($index % 2 == 0){
+                case TRUE:
+                    $new['tableClass'] = "firstColumn";
+                    break;
+                case FALSE:
+                    $new['tableClass'] = "secondColumn";
+                    break;
+            }
+            $table[] = $new;
         }
-        //this assigns the array to a variable which will later be called in
-        //the view
-        $this->data['playerInfo'] = $playerInfo;
-        $this->parser->parse('Homepage', $this->data);
         
-    } 
-    
+        $players['playerTable'] = $table;
+
+        $this->data['playerInfo'] = $this->parser->parse('_playerTable', $players, true);
+
+        $this->parser->parse('Homepage', $this->data);
+    }
+
 }
 
-    /* End of file Home.php */
+/* End of file Home.php */
     /* Location: application/controllers/Home.php */
 
