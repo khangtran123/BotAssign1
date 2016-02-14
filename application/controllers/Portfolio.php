@@ -11,7 +11,7 @@ class Portfolio extends Ci_controller
         parent::__construct();
     }
     
-    public function index()
+    public function index($player = "unknown")
     {
 		$this->load->view('MasterpageHeader');
 		$this->load->view('MasterpageNavBar');
