@@ -37,7 +37,7 @@ class Portfolio extends Application
         //all is assigned to players
         $allPlayers = $this->players->all(); 
         $list = array(); 
-        
+            
         foreach($allPlayers as $player)
         {
             $selection['player'] = $player->Player;

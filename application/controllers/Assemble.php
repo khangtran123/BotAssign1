@@ -13,14 +13,14 @@ class Assemble extends Application
     
     public function index()
     {
-		$this->data['pagebody'] = 'assemblepage';
+		$this->data['pagebody'] = 'AssemblePage';
 		$this->load->view('_MasterpageHeader');
 		$this->load->view('_MasterpageNavBar');
 		$this->playerCards();	
     }
 
     private function playerCards() {
-		$this->load->model('assemble_model');
+        $this->load->model('assemble_model');
         //try to call the query in the model to initialize it
         $query = $this->assemble_model->playerCollections();
         $playerCards = array();
@@ -47,6 +47,7 @@ class Assemble extends Application
         $this->data['playerCards'] = $this->parser->parse('_collectionTable', $players, true);
 
         $this->parser->parse('assemblepage', $this->data);
+        $this->render(); 
     }
 	private function allCards() {
 		$this->load->model('assemble_model');
