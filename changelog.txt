@@ -4,4 +4,7 @@ Newest at the top
 02/14/2016 10:00PM: Updated semi-Broken Portfolio Page
 02/14/2016 6:00PM: Updated semi-Broken Assembly Page
 02/14/2016 4:35PM: Updated the Portfolio Page - Drop down of current players
-02/14/2016 11:00AM: Fixed Homepage 
+02/14/2016 11:00AM: Fixed Homepage
+02/13/2016 3:45PM: Created the controllers for the homepage, portfolio, and assembly page
+02/11/2016 7:00PM: Created models that corresponds to the views
+02/09/2016 6:00PM: Created HTML pages that turned into views
