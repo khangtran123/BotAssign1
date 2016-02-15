@@ -8,10 +8,10 @@ This is the starter webapp for Assignment 1
 ************
 Team Members
 ************
-Emilio Wu 
-Khang Tran  
-Mark Batin 
-Anderson Phan 
+Emilio Wu - Acknowledged
+Khang Tran - Acknowledged  
+Mark Batin - Acknowledged
+Anderson Phan - Acknowledged
 
 ******************
 Coding Conventions
