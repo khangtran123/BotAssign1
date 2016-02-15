@@ -14,8 +14,25 @@ class Home extends Application {
         $this->data['pagebody'] = 'Homepage';
         $this->load->view('_MasterpageHeader');
         $this->load->view('_MasterpageNavBar');
+        $this->gameStatus();
         $this->playerInfo();
     }
+	
+	private function gameStatus() {
+		$this->load->model('GameStatus');
+		$query = $this->GameStatus->gameSummary();
+		
+		$gameStatus = array();
+		
+		foreach ($query as $stat) {
+			$gameSummary[] = (array) $stat;	
+		}
+		
+		$Status['seriesInfo'] = $gameSummary;
+		
+		$this->data['gameStatus'] = $this->parser->parse('_seriesInfo', $Status, true);
+		
+	}
 
     private function playerInfo() {
         $this->load->model('PlayerInfo');

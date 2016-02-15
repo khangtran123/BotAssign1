@@ -13,8 +13,8 @@ class Assemble_page extends Ci_controller
     
     public function index()
     {
-		$this->load->view('MasterpageHeader');
-		$this->load->view('MasterpageNavBar');
+		$this->load->view('_MasterpageHeader');
+		$this->load->view('_MasterpageNavBar');
 		$this->load->view('Assemble_page');
     }
 }
