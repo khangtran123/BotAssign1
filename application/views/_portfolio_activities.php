@@ -1,0 +1,9 @@
+{Player_transactions}
+<table>
+    <tr>
+        <td>{Trans}</td>
+        <td>{Series}</td>
+        <td>{DateTime}</td>
+    </tr>
+</table>
+{/Player_transactions}

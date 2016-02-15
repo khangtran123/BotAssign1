@@ -4,13 +4,14 @@
  * application/controllers/Home.php
  */
 
-class Home extends CI_Controller {
+class Home extends Application {
 
     function __construct() {
         parent::__construct();
     }
 
     public function index() {
+        $this->data['pagebody'] = 'Homepage';
         $this->load->view('_MasterpageHeader');
         $this->load->view('_MasterpageNavBar');
         $this->playerInfo();
@@ -45,9 +46,8 @@ class Home extends CI_Controller {
         
         $players['playerTable'] = $table;
 
-        $this->data['playerInfo'] = $this->parser->parse('_playerTable', $players, true);
-
-        $this->parser->parse('Homepage', $this->data);
+        $this->data['playerInfo'] = $this->parser->parse('_playerTable', $players, true);        
+        $this->render();
     }
 
 }

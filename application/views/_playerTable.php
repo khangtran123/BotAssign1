@@ -2,9 +2,11 @@
 <table class="{tableClass}">
     <tr>
         <td colspan="2">
+            <!--
             <p class="playerName">
                 {Player}
-            </p>
+            </p> -->
+            <a href="/Portfolio?player={player}">{Player}</a>
         </td>
     </tr>
     <tr>

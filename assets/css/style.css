@@ -4,8 +4,8 @@ body {background-color: #FF0000;}
 #footer {font-size: small; font-style:italic;text-align:center;}
 .row>div {margin-bottom:10px;}
 
-body{
-	/*background-color: blue;*/ 
+table{
+    border-spacing: 10px; 
 }
 
 .text{
@@ -38,7 +38,7 @@ body{
 }
 
 #right_container{
-        color: #C0BEBE;
+        color: white;
 	position: absolute;
 	top: 250px;
 	right: 0.5%;
@@ -53,13 +53,13 @@ body{
 .firstColumn{
     float: left; 
     margin-right: 110px; 
-    border: 2px solid #C0BEBE;
+    border: 3.5px solid white;
 }
 
 .secondColumn{
     //display: inline-block;
-    float: right;   
-    border: 2px solid #C0BEBE; 
+    float: right; 
+    border: 3.5px solid white; 
 }
 /*------ END OF HOMEPAGE ------*/
 
@@ -141,6 +141,13 @@ nav ul li:hover > ul{
 	z-index: 1;
 }
 /*------ END OF NAVIGATION MENUBAR FIELD ------*/
+
+/**------ CSS FOR Player Portfolio Page ------******************************************************************/
+#dropdown{
+    text-align: center; 
+}
+
+/*------ END OF Player Portfolio Page ------*/
 
 /**------ CSS FOR THE FOOTER FIELD ------******************************************************************/
 
