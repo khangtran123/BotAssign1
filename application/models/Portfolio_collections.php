@@ -13,15 +13,14 @@ class Portfolio_collections extends MY_Model
 {
     
     function __construct() {
-        parent::__construct();
-        $this->tablename = 'collections';
-        $this->keyfield = 'Player'; 
+        parent::__construct('collections', 'piece');
     }
     
-    public function get_collections($player_name){
-        $query = $this->db->query('SELECT piece FROM `collections` '
-                . 'WHERE player = "' . $player_name . '" ORDER BY piece');
+    public function get_collections($player_name, $piece){
+        $query = $this->db->query('SELECT piece FROM collections'
+                . ' WHERE player = "' . $player_name . '" AND'
+                . ' piece = "' . $piece . '"');
       
-        return $query->result();  
+        return $query->num_rows();  
     }
 }
