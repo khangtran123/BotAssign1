@@ -7,13 +7,14 @@
 			<h2 id="siteTitle">Bot Collector Game</h2>
 		</td>
 		<td width="30%">
-			<form name='loginForm' id='loginForm' method='POST'>
-				<br/>
-				<label for='username'>Username: </label>
-				<input type='text' name='username' id='username' size='15'>
-				<input type='hidden' name='do' value='{loginDo}'>
-				<input type='submit' value='submit'>
-			</form>
+                    <p>{welcome_msg}</p>
+                    <form name='loginForm' id='loginForm' method='POST'>
+                            <br/>
+                            <label for='username' style='display:{loginform}'>Username: </label>    
+                            <input type='text' name='username' id='username' size='15' style='display:{loginform}'>
+                            <input type='hidden' name='do' value='{loginDo}'>
+                            <input type='submit' value='{login}'>
+                    </form>
 		</td>
 	</tr>
 </table>

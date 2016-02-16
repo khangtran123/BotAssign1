@@ -11,11 +11,12 @@
  *
  * @author Khang
  */
-class PlayerLogin extends CI_Model {
+class PlayerLogin extends MY_Model {
     
     public function __construct() {
         parent::__construct();
     }
+        /*
 	public function get($whom){
 		$data = $this->db->get_where('players', $whom)->result_array();
 		
@@ -23,4 +24,11 @@ class PlayerLogin extends CI_Model {
 		
 		return $data[0];
 	}
+         * 
+         */
+    //this function query's the players in the database
+    public function userLogin(){
+        $query = $this->db->query('SELECT Player FROM players');
+        return $query->result();
+    }
 }
