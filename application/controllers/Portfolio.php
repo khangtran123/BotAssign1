@@ -9,8 +9,6 @@ class Portfolio extends Application
     function __construct()
     {
         parent::__construct();
-        $this->load->view('_MasterpageHeader');
-        $this->load->view('_MasterpageNavBar');
     }
     
     public function index($players = "unknown")
