@@ -1,3 +1,3 @@
 {selections}
-<option>{selected}>{player}</option>
+<option value="{link}" {selected}>{player}</option>
 {/selections}

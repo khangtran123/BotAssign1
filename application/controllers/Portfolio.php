@@ -41,7 +41,7 @@ class Portfolio extends Application
         foreach($allPlayers as $player)
         {
             $selection['player'] = $player->Player;
-            $selection['link'] = $this->data['appRoot'] . "/player/" . $player->Player;
+            $selection['link'] = "/portfolio/" . $player->Player;
             if ($_SERVER['PATH_INFO'] == ("/player/" . $player->Player)) {
                     $selection['selected'] = "selected=\"selected\"";
             } else {
