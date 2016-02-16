@@ -176,19 +176,20 @@ nav ul li:hover > ul{
     float: left;
     margin-left: 50px;
     border: 1px solid black;
-    padding: 15px;
+    padding: 10px;
+    width: 20%;
 }
 .collection2{
     background: white;
-
     border: 1px solid black;
-    padding: 15px;
+    padding: 10px;
+    width: 20%;
 }
 
 #assemblyRightContainer {
     position: absolute;
-    left: 65%;
-    bottom: 10%;
+    left: 50%;
+    top: 40%;
 }
 
 .buttonAssemble:hover {
@@ -196,10 +197,11 @@ nav ul li:hover > ul{
     background: yellow;
 }
 .buttonAssemble{
+    text-align: center;
     width: 100%;
-    height: 50px;
-    backgroud-color: orange;
-    border-radius: 4px;
+    height: 0%;
+    height: 150%;
+    border-radius: 10px;
     font-size:30px !important;
 }
 
