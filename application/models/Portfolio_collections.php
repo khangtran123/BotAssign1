@@ -19,8 +19,8 @@ class Portfolio_collections extends MY_Model
     }
     
     public function get_collections($player_name){
-        $query = $this->db->query('SELECT piece FROM `collections` '
-                . 'WHERE player = "' . $player_name . '" ORDER BY piece');
+        $query = $this->db->query('SELECT piece FROM collections '
+                . 'WHERE player = "' . $player_name . '"');
       
         return $query->result();  
     }
