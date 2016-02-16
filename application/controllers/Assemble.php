@@ -12,15 +12,12 @@ class Assemble extends Application
     }
     
     public function index()
-    {
-		$this->data['pagebody'] = 'assemblepage';
-		$this->load->view('_MasterpageHeader');
-		$this->load->view('_MasterpageNavBar');
-		$this->playerCards();
-                $this->selectHeads();
-                $this->selectBody();
-                $this->selectLegs();
-
+    {                   
+        $this->data['pagebody'] = 'assemblepage';
+        $this->playerCards();
+        $this->selectHeads();
+        $this->selectBody();
+        $this->selectLegs();
     }
 
     private function playerCards() {
@@ -93,6 +90,7 @@ class Assemble extends Application
 		$cards['AllPieces'] = $allLegs;
 		
 		$this->data['selectLegs'] = $this->parser->parse('_allPieces', $cards, true);
+                $this->render();
                 $this->parser->parse('assemblepage', $this->data);
 		
 	}

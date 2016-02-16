@@ -23,7 +23,7 @@ class Portfolio extends Application
         $this->data['pagebody'] = 'Player';
         $this->data['Player_dropdown'] = $this->parser->parse('_portfolio_playerDropdown', $this->get_players(), true);
         $this->get_activities($players);
-        $this->get_collections($players);
+        $this->get_cards($players);
         $this->data['username'] = $players;
         
         $this->render(); 
@@ -66,31 +66,33 @@ class Portfolio extends Application
     }
     
     //this function gets the cards that player has
-    private function get_collections($players)
+    private function get_cards($players)
     {
         $this->load->model('Portfolio_collections');
-        $result = $this->Portfolio_collections->get_collections($players);
         
-        $list = array();
-        foreach ($result as $row)
-        {
-            $list[] = (array) $row;
-        }
+        $this->data['11ah'] = $this->Portfolio_collections->get_collections($players, "11a-0");
+        $this->data['11ab'] = $this->Portfolio_collections->get_collections($players, "11a-1");
+        $this->data['11al'] = $this->Portfolio_collections->get_collections($players, "11a-2");
         
-        //$data['collections'] = $list;
-        //$this->parser->parse('_portfolio_holdings', $this->get_collections($players), true);
+        $this->data['11bh'] = $this->Portfolio_collections->get_collections($players, "11b-0");
+        $this->data['11bb'] = $this->Portfolio_collections->get_collections($players, "11b-1");
+        $this->data['11bl'] = $this->Portfolio_collections->get_collections($players, "11b-2");
         
-        $this ->load->library('table');
-        $parms = array(
-            'table_open' => '<table>',
-            'cell_start' => '<td>',
-            'cell_atl_start' => '<td>'
-        );
-        $this->table->set_template($parms);
+        $this->data['11ch'] = $this->Portfolio_collections->get_collections($players, "11c-0");
+        $this->data['11cb'] = $this->Portfolio_collections->get_collections($players, "11c-1");
+        $this->data['11cl'] = $this->Portfolio_collections->get_collections($players, "11c-2");
 
-        // generate the table
-        $rows = $this->table->make_columns($cells, 3);
-        $this->data['collections'] = $this->table->generate($rows);
+        $this->data['13ch'] = $this->Portfolio_collections->get_collections($players, "11b-0");
+        $this->data['13cb'] = $this->Portfolio_collections->get_collections($players, "11b-1");
+        $this->data['13cl'] = $this->Portfolio_collections->get_collections($players, "11b-2");
+        
+        $this->data['13dh'] = $this->Portfolio_collections->get_collections($players, "13c-0");
+        $this->data['13db'] = $this->Portfolio_collections->get_collections($players, "13c-1");
+        $this->data['13dl'] = $this->Portfolio_collections->get_collections($players, "13c-2");
+
+        $this->data['26hh'] = $this->Portfolio_collections->get_collections($players, "26h-0");
+        $this->data['26hb'] = $this->Portfolio_collections->get_collections($players, "26h-1");
+        $this->data['26hl'] = $this->Portfolio_collections->get_collections($players, "26h-2");
     }
 }
     /* End of file Portfolio.php */
