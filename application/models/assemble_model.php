@@ -1,4 +1,4 @@
-<?php
+        <?php
 
 class assemble_model extends MY_Model {
     
@@ -21,8 +21,18 @@ class assemble_model extends MY_Model {
         return $query->result();  
     }
 	
-	    function allCards(){
-        $query = $this->db->query("SELECT `Piece` FROM `collections`");
+	function allHeads(){
+            $query = $this->db->query("SELECT `Piece` FROM `collections` WHERE `Piece` LIKE '%0'");
+      
+        return $query->result();  
+    }
+	function allBody(){
+            $query = $this->db->query("SELECT `Piece` FROM `collections` WHERE `Piece` LIKE '%1'");
+      
+        return $query->result();  
+    }
+	function allLegs(){
+            $query = $this->db->query("SELECT `Piece` FROM `collections` WHERE `Piece` LIKE '%2'");
       
         return $query->result();  
     }

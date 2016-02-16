@@ -1,3 +1,4 @@
 {selections}
-<option>{selected}>{player}</option>
+<option value="{link}">{player}</option>
+{username}
 {/selections}

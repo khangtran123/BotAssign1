@@ -12,8 +12,6 @@ class Home extends Application {
 
     public function index() {
         $this->data['pagebody'] = 'Homepage';
-        $this->load->view('_MasterpageHeader');
-        $this->load->view('_MasterpageNavBar');
         $this->gameStatus();
         $this->playerInfo();
     }
@@ -40,7 +38,7 @@ class Home extends Application {
         //try to call the query in the model to initialize it
         $query = $this->PlayerInfo->playerEC();
 
-
+        
         $playerInfo = array();
 
         foreach ($query as $row) {

@@ -7,7 +7,7 @@
 			<h2 id="siteTitle">Bot Collector Game</h2>
 		</td>
 		<td width="30%">
-                    <p>{debug}</p>
+                    <p>{welcome_msg}</p>
                     <form name='loginForm' id='loginForm' method='POST'>
                             <br/>
                             <label for='username' style='display:{loginform}'>Username: </label>    
