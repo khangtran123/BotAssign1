@@ -13,14 +13,12 @@ class Portfolio_transactions extends MY_Model
 {
     
     function __construct() {
-        parent::__construct();
-        $this->tablename = 'transactions';
-        $this->keyfield = 'Player'; 
+        parent::__construct('transactions','player');
     }
     
     public function get_transactions($player_name){
         $query = $this->db->query('SELECT DateTime, Series, Trans '
-                . 'FROM `transactions` WHERE player = "' . $player_name 
+                . 'FROM transactions WHERE player = "' . $player_name 
                 . '" ORDER BY DateTime LIMIT 3');
       
         return $query->result();  

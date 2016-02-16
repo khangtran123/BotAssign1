@@ -16,16 +16,18 @@ class Portfolio extends Application
     public function index($players = "unknown")
     {   
         //This condition states that if a link wasn't clicked 
-        //or no one is signed in, it just shows the default plaayer portfolio
+        //or no one is signed in, it just shows the default player portfolio
         //which is the first name in the database "Donald"
         if (is_null($players) || $players == "")
         {
-                $players = "Donald";
+            $players = "Donald";
         }
         $this->data['pagebody'] = 'Player';
         $this->data['Player_dropdown'] = $this->parser->parse('_portfolio_playerDropdown', $this->get_players(), true);
-        $this->data['Player_transactions'] = $this->parser->parse('_portfolio_activities', $this->get_activities($players), true);
-        $this->data['Player_collections'] = $this->parser->parse('_portfolio_holdings', $this->get_collections($players), true);
+        $this->get_activities($players);
+        $this->get_collections($players);
+        $this->data['username'] = $players;
+        
         $this->render(); 
     }
     
@@ -42,46 +44,55 @@ class Portfolio extends Application
         {
             $selection['player'] = $player->Player;
             $selection['link'] = "/portfolio/" . $player->Player;
-            if ($_SERVER['PATH_INFO'] == ("/player/" . $player->Player)) {
-                    $selection['selected'] = "selected=\"selected\"";
-            } else {
-                    $selection['selected'] = "";
-            }
             $list[] = $selection;
         }
         
         $players['selections'] = $list;
-        //$this->data['debug'] = print_r($list, TRUE);
 	return $players;
-       
     }
     
     //This function gets the activities or transactions made by that player
     private function get_activities($players)
     {
         $this->load->model('Portfolio_transactions');
-        $query = $this->Portfolio_transactions->get_transactions($players);
-        $rows = array();
-        foreach ($query as $row)
-        {
-            $rows[] = (array) $row;
+        $result = $this->Portfolio_transactions->get_transactions($players);
+        $list = array();
+        
+        foreach ($result as $row)
+        {   
+            $list[] = (array) $row;
         }
-        return $rows;
+        
+        $data['transactions'] = $list;	
+        $this->data['transactions'] = $this->parser->parse('_portfolio_activities', $data, true);
     }
     
     //this function gets the cards that player has
     private function get_collections($players)
     {
         $this->load->model('Portfolio_collections');
-        $query = $this->Portfolio_collections->get_collections($players);
+        $result = $this->Portfolio_collections->get_collections($players);
         
-        $rows = array();
-        foreach ($query as $row)
+        $list = array();
+        foreach ($result as $row)
         {
-            $rows[] = (array) $row;
+            $list[] = (array) $row;
         }
         
-        return $rows;
+        //$data['collections'] = $list;
+        //$this->parser->parse('_portfolio_holdings', $this->get_collections($players), true);
+        
+        $this ->load->library('table');
+        $parms = array(
+            'table_open' => '<table>',
+            'cell_start' => '<td>',
+            'cell_atl_start' => '<td>'
+        );
+        $this->table->set_template($parms);
+
+        // generate the table
+        $rows = $this->table->make_columns($cells, 3);
+        $this->data['collections'] = $this->table->generate($rows);
     }
 }
     /* End of file Portfolio.php */

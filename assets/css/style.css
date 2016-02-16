@@ -164,6 +164,13 @@ nav ul li:hover > ul{
     text-align: center; 
 }
 
+player_activies{
+    text-align: center; 
+}
+
+player_holdings{
+    text-align: center; 
+}
 /*------ END OF Player Portfolio Page ------*/
 /**------ CSS FOR Assemble Page ------******************************************************************/
 

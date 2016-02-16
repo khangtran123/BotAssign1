@@ -1,4 +1,4 @@
-{Player_transactions}
+{transactions}
 <table>
     <tr>
         <td>{Trans}</td>
@@ -6,4 +6,4 @@
         <td>{DateTime}</td>
     </tr>
 </table>
-{/Player_transactions}
+{/transactions}
