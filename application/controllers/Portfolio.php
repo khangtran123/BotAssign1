@@ -13,6 +13,14 @@ class Portfolio extends Application
     
     public function index($players = "unknown")
     {   
+        //have to make condition that states if a user sesison is logged in
+        //in or not 
+        if($this->session->userdata('username')){
+            $players = $this->session->userdata('username');
+        } else{
+            //display default player which is Donald
+        }
+        
         //This condition states that if a link wasn't clicked 
         //or no one is signed in, it just shows the default player portfolio
         //which is the first name in the database "Donald"
