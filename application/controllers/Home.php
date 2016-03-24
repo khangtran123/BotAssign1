@@ -4,16 +4,15 @@
  * application/controllers/Home.php
  */
 
-class Home extends CI_Controller {
+class Home extends Application {
 
     function __construct() {
         parent::__construct();
     }
 
     public function index() {
-        $this->load->view('_MasterpageHeader');
-        $this->load->view('_MasterpageNavBar');
-		$this->gameStatus();
+        $this->data['pagebody'] = 'Homepage';
+        $this->gameStatus();
         $this->playerInfo();
     }
 	
@@ -39,7 +38,7 @@ class Home extends CI_Controller {
         //try to call the query in the model to initialize it
         $query = $this->PlayerInfo->playerEC();
 
-
+        
         $playerInfo = array();
 
         foreach ($query as $row) {
@@ -62,9 +61,8 @@ class Home extends CI_Controller {
         
         $players['playerTable'] = $table;
 
-        $this->data['playerInfo'] = $this->parser->parse('_playerTable', $players, true);
-
-        $this->parser->parse('Homepage', $this->data);
+        $this->data['playerInfo'] = $this->parser->parse('_playerTable', $players, true);        
+        $this->render();
     }
 
 }

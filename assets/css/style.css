@@ -4,8 +4,8 @@ body {background-color: #FF0000;}
 #footer {font-size: small; font-style:italic;text-align:center;}
 .row>div {margin-bottom:10px;}
 
-body{
-	/*background-color: blue;*/ 
+table{
+    border-spacing: 10px; 
 }
 
 .text{
@@ -38,7 +38,7 @@ body{
 }
 
 #right_container{
-        color: #C0BEBE;
+        color: white;
 	position: absolute;
 	top: 250px;
 	right: 0.5%;
@@ -53,13 +53,13 @@ body{
 .firstColumn{
     float: left; 
     margin-right: 110px; 
-    border: 2px solid #C0BEBE;
+    border: 3.5px solid white;
 }
 
 .secondColumn{
     //display: inline-block;
-    float: right;   
-    border: 2px solid #C0BEBE; 
+    float: right; 
+    border: 3.5px solid white; 
 }
 
 #gameStats {
@@ -159,6 +159,65 @@ nav ul li:hover > ul{
 }
 /*------ END OF NAVIGATION MENUBAR FIELD ------*/
 
+/**------ CSS FOR Player Portfolio Page ------******************************************************************/
+#dropdown{
+    text-align: center; 
+}
+
+player_activies{
+    text-align: center; 
+}
+
+player_holdings{
+    text-align: center; 
+}
+/*------ END OF Player Portfolio Page ------*/
+/**------ CSS FOR Assemble Page ------******************************************************************/
+
+#collectionContainer{
+    
+}
+.collection1{
+    //display: inline-block;
+    background: white;
+    float: left;
+    margin-left: 50px;
+    border: 1px solid black;
+    padding: 10px;
+    width: 20%;
+}
+.collection2{
+    background: white;
+    border: 1px solid black;
+    padding: 10px;
+    width: 20%;
+}
+
+#assemblyRightContainer {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+}
+
+.buttonAssemble:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    background: yellow;
+}
+.buttonAssemble{
+    text-align: center;
+    width: 100%;
+    height: 0%;
+    height: 150%;
+    border-radius: 10px;
+    font-size:30px !important;
+}
+
+#previewH5{
+    padding: 15px;
+    font-size:30px !important;
+    text-align: center;
+}
+/*------ END OF Assemble Page ------*/
 /**------ CSS FOR THE FOOTER FIELD ------******************************************************************/
 
 
