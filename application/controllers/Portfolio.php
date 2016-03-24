@@ -15,25 +15,27 @@ class Portfolio extends Application
     {   
         //have to make condition that states if a user sesison is logged in
         //in or not 
+        
         if($this->session->userdata('username')){
-            $players = $this->session->userdata('username');
+            $sessionPlayers = $this->session->userdata('username');
         } else{
             //display default player which is Donald
+            $sessionPlayers = "unknown";   
         }
         
         //This condition states that if a link wasn't clicked 
         //or no one is signed in, it just shows the default player portfolio
         //which is the first name in the database "Donald"
+        /*
         if (is_null($players) || $players == "")
         {
             $players = "Donald";
-        }
+        }*/
         $this->data['pagebody'] = 'Player';
         $this->data['Player_dropdown'] = $this->parser->parse('_portfolio_playerDropdown', $this->get_players(), true);
-        $this->get_activities($players);
+        $this->get_activities($sessionPlayers,$players);
         $this->get_cards($players);
         $this->data['username'] = $players;
-        
         $this->render(); 
     }
     
@@ -58,10 +60,14 @@ class Portfolio extends Application
     }
     
     //This function gets the activities or transactions made by that player
-    private function get_activities($players)
+    private function get_activities($sessionPlayers,$players)
     {
         $this->load->model('Portfolio_transactions');
-        $result = $this->Portfolio_transactions->get_transactions($players);
+        if($this->session->userdata('username')){
+            $result = $this->Portfolio_transactions->get_transactions($sessionPlayers);
+        } else{
+            $result = $this->Portfolio_transactions->get_transactions($players);
+        }
         $list = array();
         
         foreach ($result as $row)
