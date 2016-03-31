@@ -91,7 +91,6 @@ class Assemble extends Application
 		
 		$this->data['selectLegs'] = $this->parser->parse('_allPieces', $cards, true);
                 $this->render();
-                $this->parser->parse('assemblepage', $this->data);
 		
 	}
 }

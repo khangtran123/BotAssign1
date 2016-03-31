@@ -6,7 +6,7 @@
             <p class="playerName">
                 {Player}
             </p> -->
-            <a href="/Portfolio?player={player}">{Player}</a>
+            <a href="/portfolio/{Player}">{Player}</a>
         </td>
     </tr>
     <tr>
