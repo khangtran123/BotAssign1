@@ -24,7 +24,6 @@ class Application extends CI_Controller {
         $this->data = array();
         $this->errors = array(); 
         $this->userLogin();
-        //$this->reload();
 	}
             //function userLogin is configured in core controller becuase you want it
             //to load everytime the _template.php is loaded for all pages
@@ -50,8 +49,7 @@ class Application extends CI_Controller {
                 if(!empty($username) && $whatToDo === 'login'){
                         if(array_search($username, $player) !== FALSE)
                         {
-                            // username in table
-                            //$this->data['welcome_msg'] = 'Please Enter a Username';    
+                            // username in table   
                             //array('username'=>$username) creates an array in the session
                             //with a keyfield of username and it's value is the var $username
                             $this->session->set_userdata(array('username'=>$username));
@@ -79,7 +77,7 @@ class Application extends CI_Controller {
                 
                
             }
-	/*
+	/* What does this function do?
 	function reload(){
 		if($this->session->userdata('username'))
 		{
