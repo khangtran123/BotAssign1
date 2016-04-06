@@ -6,16 +6,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <h1>Bot Assembly</h1>
 </div>
 <div>
-    {playerCards}
+ {playerCards}
 </div>
 <div id="assemblyRightContainer">
 <table>
-    <tr><td><select class="buttonAssemble"><option value={pieces}>{piece}</option></select></td></tr>
-    <tr><td>Torso<select class="buttonAssemble"><option>11a-1</option></select></td></tr>
-    <tr><td>Legs<select class="buttonAssemble"><option>11a-2</option></select></td></tr>
-    <tr><td><button type="button" class="buttonAssemble">ASSEMBLE</button></td></tr>
-    <tr></tr>
-    <br/>
-    <tr><td><h5 id="previewH5">Preview</h5></td></tr>
+    <tr><td>Head<select class="buttonAssemble" >{selectHeads}</select></td></tr>
+    <tr><td><br/><br/></td></tr>
+    <tr><td>Body<select class="buttonAssemble" >{selectBody}</select></td></tr>
+    <tr><td><br/><br/></td></tr>
+    <tr><td>Legs<select class="buttonAssemble" >{selectLegs}</select></td></tr>
+                <tr><td><br/><br/></td></tr>
+    <tr><td><input class="buttonAssemble" type="submit" name='btn_submit' value='Assemble'/></td></tr>            
+    <tr><td><h5 id="previewH5"><br/>Preview</h5></td></tr>
+    <tr><td><img src="/assets/images/11c-0.jpeg"</td></tr>
+    <tr><td><img src="/assets/images/11c-1.jpeg"</td></tr>
+    <tr><td><img src="/assets/images/11c-2.jpeg"</td></tr>
 </table>
 </div>
+   
