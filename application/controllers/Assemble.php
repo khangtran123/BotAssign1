@@ -1,7 +1,7 @@
 <?php
 
 /* 
- * application/controllers/Assemble_page.php
+ * application/controllers/Assemblepage.php
  */
 
 class Assemble extends Application
@@ -12,11 +12,12 @@ class Assemble extends Application
     }
     
     public function index()
-    {
-		$this->data['pagebody'] = 'AssemblePage';
-		$this->load->view('_MasterpageHeader');
-		$this->load->view('_MasterpageNavBar');
-		$this->playerCards();	
+    {                   
+        $this->data['pagebody'] = 'assemblepage';
+        $this->playerCards();
+        $this->selectHeads();
+        $this->selectBody();
+        $this->selectLegs();
     }
 
     private function playerCards() {
@@ -45,15 +46,52 @@ class Assemble extends Application
         $players['collectionTable'] = $table;
 
         $this->data['playerCards'] = $this->parser->parse('_collectionTable', $players, true);
-
-        $this->parser->parse('assemblepage', $this->data);
-        $this->render(); 
     }
-	private function allCards() {
-		$this->load->model('assemble_model');
-		$query = $this->assemble_model->allCards();
-		$data['pieces'] = $this->PlayerCards->allCards();
-		$this->data['pieces'] = $this->parser->parse('assemblepage', $this->data);
+    	private function selectHeads() {
+                $this->load->model('assemble_model');
+		$query = $this->assemble_model->allHeads();
+		
+		$selectHeads = array();
+		
+		foreach ($query as $row) {
+			$allHeads[] = (array) $row;	
+		}
+		
+		$cards['AllPieces'] = $allHeads;
+		
+		$this->data['selectHeads'] = $this->parser->parse('_allPieces', $cards, true);
+		
+	}
+            	private function selectBody() {
+                $this->load->model('assemble_model');
+		$query = $this->assemble_model->allBody();
+		
+		$selectBody = array();
+		
+		foreach ($query as $row) {
+			$allBody[] = (array) $row;	
+		}
+		
+		$cards['AllPieces'] = $allBody;
+		
+		$this->data['selectBody'] = $this->parser->parse('_allPieces', $cards, true);
+		
+	}
+            	private function selectLegs() {
+                $this->load->model('assemble_model');
+		$query = $this->assemble_model->allLegs();
+		
+		$selectLegs = array();
+		
+		foreach ($query as $row) {
+			$allLegs[] = (array) $row;	
+		}
+		
+		$cards['AllPieces'] = $allLegs;
+		
+		$this->data['selectLegs'] = $this->parser->parse('_allPieces', $cards, true);
+                $this->render();
+		
 	}
 }
     /* End of file Assemble_page.php */
