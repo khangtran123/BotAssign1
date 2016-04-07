@@ -18,9 +18,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <tr><td><br/><br/></td></tr>
     <tr><td><input class="buttonAssemble" type="submit" name='btn_submit' value='Assemble'/></td></tr>            
     <tr><td><h5 id="previewH5"><br/>Preview</h5></td></tr>
-    <tr><td><img src="/assets/images/11c-0.jpeg"</td></tr>
-    <tr><td><img src="/assets/images/11c-1.jpeg"</td></tr>
-    <tr><td><img src="/assets/images/11c-2.jpeg"</td></tr>
+    <tr><td><img src="../../assets/images/11c-0.jpeg"</td></tr>
+    <tr><td><img src="../../assets/images/11c-1.jpeg"</td></tr>
+    <tr><td><img src="../../assets/images/11c-2.jpeg"</td></tr>
 </table>
 </div>
    

@@ -5,18 +5,18 @@
  * and open the template in the editor.
  */
 /**
- * Description of Portfolio_collections
+ * Description of portfolioCollections
  *
  * @author Emilio
  */
-class Portfolio_collections extends MY_Model
+class portfolioCollections extends MY_Model
 {
     
     function __construct() {
         parent::__construct('collections', 'piece');
     }
     
-    public function get_collections($player_name, $piece){
+    public function getCollections($player_name, $piece){
         $query = $this->db->query('SELECT piece FROM collections'
                 . ' WHERE player = "' . $player_name . '" AND'
                 . ' piece = "' . $piece . '"');
