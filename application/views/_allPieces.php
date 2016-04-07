@@ -1,3 +1,3 @@
-{AllPieces}        
+{allPieces}        
     <option value="{Piece}">{Piece}</option>
-{/AllPieces}
+{/allPieces}
