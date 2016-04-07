@@ -7,25 +7,24 @@
  */
 
 /**
- * Description of PlayerInfo
+ * Description of playerLogin
  *
  * @author Khang
  */
-class PlayerLogin extends MY_Model {
+class playerLogin extends MY_Model {
     
     public function __construct() {
         parent::__construct();
     }
-        /*
-	public function get($whom){
-		$data = $this->db->get_where('players', $whom)->result_array();
-		
-		if(empty($data)){return NULL;}
-		
-		return $data[0];
-	}
-         * 
-         */
+    
+    /*public function get($whom){
+        $data = $this->db->get_where('players', $whom)->result_array();
+
+        if(empty($data)){return NULL;}
+
+        return $data[0];
+    }*/
+    
     //this function query's the players in the database
     public function userLogin(){
         $query = $this->db->query('SELECT Player FROM players');

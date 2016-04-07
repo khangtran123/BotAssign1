@@ -3,13 +3,13 @@
         <h2 class="text">Player: {username}</h2>
         <!--{Player_Dropdown}-->
         Select a player to view
-	<select onchange="window.location.href = this.value">
+	<select onchange="window.location.href=this.value">
             <option>Player Name</option>
-            {Player_dropdown}
+            {playerDropdown}
 	</select>     
     </div>
     
-    <div id="player_activies">
+    <div id="playerActivies">
         <h2 class="text">Recent Activities:</h2>
         <table>
             <tr>
@@ -23,7 +23,7 @@
         </table>
     </div>
 
-     <div id="player_holdings">
+     <div id="playerHoldings">
         <h2 class="text">Current Holdings:</h2>
         <table>
             <tr>
@@ -64,5 +64,4 @@
             </tr>
         </table>
      </div>
-
 </div>

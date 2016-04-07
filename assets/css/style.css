@@ -57,7 +57,7 @@ table{
 }
 
 .secondColumn{
-    //display: inline-block;
+    /*display: inline-block;*/
     float: right; 
     border: 3.5px solid white; 
 }
@@ -178,7 +178,7 @@ player_holdings{
     
 }
 .collection1{
-    //display: inline-block;
+    /*display: inline-block;*/
     background: white;
     float: left;
     margin-left: 50px;

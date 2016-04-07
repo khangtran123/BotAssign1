@@ -11,7 +11,7 @@
  *
  * @author Khang
  */
-class PlayerInfo extends MY_Model {
+class playerInfo extends MY_Model {
     
     function __construct() {
         parent::__construct();
