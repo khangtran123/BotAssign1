@@ -7,11 +7,11 @@
  */
 
 /**
- * Description of GameStatus
+ * Description of gameStatus
  *
  * @author Anderson
  */
-class GameStatus extends MY_Model {
+class gameStatus extends MY_Model {
     
     function __construct() {
         parent::__construct();

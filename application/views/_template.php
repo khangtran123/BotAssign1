@@ -7,7 +7,7 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="../assets/css/style.css"/>
+        <link rel="stylesheet" href="../../assets/css/style.css"/>
         <title>Home</title>
     </head>
     <body>

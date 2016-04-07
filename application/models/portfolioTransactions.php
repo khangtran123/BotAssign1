@@ -5,11 +5,11 @@
  * and open the template in the editor.
  */
 /**
- * Description of Portfolio_transactions
+ * Description of portfolioTransactions
  *
  * @author Emilio
  */
-class Portfolio_transactions extends MY_Model
+class portfolioTransactions extends MY_Model
 {
     
     function __construct() {
