@@ -5,9 +5,8 @@
     </p>
 </div>
 
- <!-- Right bar (Players Info) !-->
- <div id="right_container">
-     <h2 class = "text">Player Info</h2>
-     {playerInfo}
- </div>
+<!-- Right bar (Players Info) !-->
+<div id="right_container">
+    <h2 class = "text">Player Info</h2>
+    {playerInfo}
 </div>

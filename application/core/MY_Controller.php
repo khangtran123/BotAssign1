@@ -24,11 +24,11 @@ class Application extends CI_Controller {
         $this->data = array();
         $this->errors = array();
         $this->userLogin();
+        $this->getToken();
     }
 
     //function userLogin is configured in core controller becuase you want it
     //to load everytime the _template.php is loaded for all pages
-
     function userLogin() {
         //loads the model playerLogin which uses the function to grab the player query
         $this->load->model('playerLogin');
@@ -76,6 +76,34 @@ class Application extends CI_Controller {
         }
     }
 
+    // get token to communicate with BCC server
+    private function getToken() {
+        $postdata = http_build_query(
+                array(
+                    'team' => 'b01',
+                    'name' => 'Skynet',
+                    'password' => 'tuesday'
+                )
+        );
+
+        $post = array('http' =>
+            array(
+                'method' => 'POST',
+                'header' => 'Content-type: application/x-www-form-urlencoded',
+                'content' => $postdata
+            )
+        );
+
+        $context = stream_context_create($post);
+        $result = file_get_contents('http://botcards.jlparry.com/register', false, $context);
+        $xml = simplexml_load_string($result);
+        //print_r($xml);
+        //die();
+        $token = (string) $xml->token;
+        $this->data['token'] = $token;
+        $this->session->set_userdata(array('token'=>$token));
+    }
+    
     /**
      * Render this page
      */
@@ -88,5 +116,4 @@ class Application extends CI_Controller {
         $this->parser->parse('_masterPageNavbar', $this->data);
         $this->parser->parse('_template', $this->data);
     }
-
 }
