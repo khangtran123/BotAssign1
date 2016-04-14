@@ -78,6 +78,7 @@ table{
 	text-align: center;
 	height: 10px;
 }
+
 /*------ END OF HOMEPAGE ------*/
 
 
@@ -99,6 +100,10 @@ table{
         color: white;
 	width:60px;
 	padding-left: 3em;
+}
+
+.headerTable{
+    width: 50%;
 }
 
 /*------ END OF HEADER FIELD ------*/
