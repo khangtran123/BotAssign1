@@ -24,7 +24,7 @@ class assembleModel extends MY_Model {
     function allBody($player) {
         $query = $this->db->query('SELECT Piece FROM Collections'
                 . ' WHERE Player = "' . $player . '" AND'
-                . ' Piece LIKE "%0"');
+                . ' Piece LIKE "%1"');
         //$query = $this->db->query("SELECT `Piece` FROM `collections` WHERE `Piece` LIKE '%1'");
         return $query->result();
     }
@@ -32,7 +32,7 @@ class assembleModel extends MY_Model {
     function allLegs($player) {
         $query = $this->db->query('SELECT Piece FROM Collections'
                 . ' WHERE Player = "' . $player . '" AND'
-                . ' Piece LIKE "%0"');
+                . ' Piece LIKE "%2"');
         //$query = $this->db->query("SELECT `Piece` FROM `collections` WHERE `Piece` LIKE '%2'");
         return $query->result();
     }
