@@ -24,12 +24,12 @@ table{
     color: white;
     width: 50%;
     top: 200px;
- 
+
 }
 
 #intro {
-	font-size: 18px;
-	text-align: justify;
+    font-size: 18px;
+    text-align: justify;
 }
 
 #statusContent{
@@ -38,12 +38,12 @@ table{
 }
 
 #right_container{
-        color: white;
-	position: absolute;
-	top: 250px;
-	right: 0.5%;
-	width: 	30%;
-	padding-bottom: 30px;
+    color: white;
+    position: absolute;
+    top: 250px;
+    right: 0.5%;
+    width: 	30%;
+    padding-bottom: 30px;
 }
 
 .playerName{
@@ -63,31 +63,27 @@ table{
 }
 
 #gameStats {
-	border: 2px solid #C0BEBE;
+    border: 2px solid #C0BEBE;
 }
 
 .seriesStats{
-	border-left: 2px solid #C0BEBE;
-	border-right: 2px solid #C0BEBE;
-	padding-left: 5px;
-	padding-right: 5px;
+    border-left: 2px solid #C0BEBE;
+    border-right: 2px solid #C0BEBE;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .seriesStats th{
-	border-bottom: 2px solid #C0BEBE;
-	text-align: center;
-	height: 10px;
+    border-bottom: 2px solid #C0BEBE;
+    text-align: center;
+    height: 10px;
 }
-
 /*------ END OF HOMEPAGE ------*/
-
-
-
 
 /**------ CSS FOR THE HEADER FIELD ------******************************************************************/
 
 #banner{
-	width:30%;
+    width:30%;
 }
 
 #siteTitle{
@@ -97,13 +93,20 @@ table{
 #bannerLogoImage{}
 
 #headerInfo{
-        color: white;
-	width:60px;
-	padding-left: 3em;
+    color: black;
+    width:60px;
+    padding-left: 3em;
 }
 
-.headerTable{
-    width: 50%;
+.buttonLogin:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    background: yellow;
+}
+
+.buttonLogin{
+    text-align: center;
+    border-radius: 10px;
+    font-size:15px !important;
 }
 
 /*------ END OF HEADER FIELD ------*/
@@ -111,56 +114,56 @@ table{
 /**------ CSS FOR THE NAVIGATION MENUBAR FIELD ------******************************************************/
 
 nav{
-	padding: 0 0 0 0;
+    padding: 0 0 0 0;
 }
 
 nav ul{
-	list-style: none;
-	padding: 0;
-	position: relative;
+    list-style: none;
+    padding: 0;
+    position: relative;
 }
 nav ul:after {
-	content: "";
-	clear: both;
-	display: block;
+    content: "";
+    clear: both;
+    display: block;
 }
 
 .menu{
-	float: left;
-	text-align: center;
-	width: 33.3%;
-	line-height: 25px;
+    float: left;
+    text-align: center;
+    width: 33.3%;
+    line-height: 25px;
 }
 
 nav ul li a{
-	
-	padding: 5px 25px;
-	text-decoration: none;
-	color: white;
-	background: #252E30;
-	font-size: 0.9em;
-	text-align: center;
-	display: block;
-	transition: 0.5s all;
-	-webkit-transition: 0.5s all;
-	-moz-transition: 0.5s all;
-	-o-transition: 0.5s all;
+
+    padding: 5px 25px;
+    text-decoration: none;
+    color: white;
+    background: #252E30;
+    font-size: 0.9em;
+    text-align: center;
+    display: block;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
 }
-	
+
 nav ul li a:hover {
-	background: #353A42;
-	color: #49CBCD;
-	text-decoration: none;
+    background: #353A42;
+    color: #49CBCD;
+    text-decoration: none;
 }
 nav ul ul{
-	display: none;
-	position: absolute;
-	width: 20%;
+    display: none;
+    position: absolute;
+    width: 20%;
 }
 
 nav ul li:hover > ul{
-	display: block;
-	z-index: 1;
+    display: block;
+    z-index: 1;
 }
 /*------ END OF NAVIGATION MENUBAR FIELD ------*/
 
@@ -176,11 +179,27 @@ player_activies{
 player_holdings{
     text-align: center; 
 }
+
+#playerActionsForm {
+    text-align: center;
+}
+
+.buttonPlayer:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    background: yellow;
+}
+.buttonPlayer{
+    text-align: center;
+    border-radius: 10px;
+    font-size:20px !important;
+}
+
 /*------ END OF Player Portfolio Page ------*/
+
 /**------ CSS FOR Assemble Page ------******************************************************************/
 
 #collectionContainer{
-    
+
 }
 .collection1{
     /*display: inline-block;*/
@@ -223,6 +242,7 @@ player_holdings{
     text-align: center;
 }
 /*------ END OF Assemble Page ------*/
+
 /**------ CSS FOR THE FOOTER FIELD ------******************************************************************/
 
 

@@ -1,6 +1,7 @@
 Change log
 Newest at the top
 
+04/14/2016 04:18PM: Updated code to get the Buy function to work and purchase from the BCC server. Also made some minor CSS changes.
 04/07/2016 00:26AM: updated code as per Assignment 1 feedbacks
 02/14/2016 10:45PM: Updated semi-Broken Assembly Page
 02/14/2016 10:00PM: Updated semi-Broken Portfolio Page
