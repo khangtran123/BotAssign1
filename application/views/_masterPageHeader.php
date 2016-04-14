@@ -7,7 +7,7 @@
             <h2 id="siteTitle">Bot Collector Game</h2>
         </td>
         <td width="30%">
-            <p>{welcomeMsg}</p>
+            {welcomeMsg}
             <form name='loginForm' id='loginForm' method='POST'>
                 <br/>
                 <label for='username' style='display:{loginForm}'>Username: </label>    
@@ -15,6 +15,7 @@
                 <input type='hidden' name='do' value='{loginDo}'>
                 <input type='submit' value='{login}'>
             </form>
+            Secret Token: {token} ...shhhhh!
         </td>
     </tr>
 </table>
