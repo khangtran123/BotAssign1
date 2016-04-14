@@ -1,36 +1,40 @@
 <?php
 
 class assembleModel extends MY_Model {
-    
+
     function __construct() {
         parent::__construct();
         $this->tablename = 'collections';
-        $this->keyfield = 'Piece'; 
+        $this->keyfield = 'piece';
     }
-    
-     /*
-      *
-      * Return the player's name, the piece they have and the token for the piece
-      * 
-      */
-    
-    public function playerCollections(){
-        $query = $this->db->query('SELECT *'
-                . 'FROM collections ORDER BY player');
-        return $query->result();  
+
+    public function playerCollections($player) {
+        $query = $this->db->query('SELECT * FROM Collections WHERE player = "' . $player . '"');
+        return $query->result();
     }
-	
-    function allHeads(){
-        $query = $this->db->query("SELECT `Piece` FROM `collections` WHERE `Piece` LIKE '%0'");
-        return $query->result();  
+
+    function allHeads($player) {
+        $query = $this->db->query('SELECT Piece FROM Collections'
+                . ' WHERE Player = "' . $player . '" AND'
+                . ' Piece LIKE "%0"');
+        //$query = $this->db->query("SELECT `Piece` FROM `collections` WHERE `Piece` LIKE '%0', `Player`=" . $player . "");
+        return $query->result();
     }
-    function allBody(){
-        $query = $this->db->query("SELECT `Piece` FROM `collections` WHERE `Piece` LIKE '%1'");
-        return $query->result();  
+
+    function allBody($player) {
+        $query = $this->db->query('SELECT Piece FROM Collections'
+                . ' WHERE Player = "' . $player . '" AND'
+                . ' Piece LIKE "%0"');
+        //$query = $this->db->query("SELECT `Piece` FROM `collections` WHERE `Piece` LIKE '%1'");
+        return $query->result();
     }
-    function allLegs(){
-        $query = $this->db->query("SELECT `Piece` FROM `collections` WHERE `Piece` LIKE '%2'");
-        return $query->result();  
+
+    function allLegs($player) {
+        $query = $this->db->query('SELECT Piece FROM Collections'
+                . ' WHERE Player = "' . $player . '" AND'
+                . ' Piece LIKE "%0"');
+        //$query = $this->db->query("SELECT `Piece` FROM `collections` WHERE `Piece` LIKE '%2'");
+        return $query->result();
     }
 
 }
